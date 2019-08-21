@@ -2,6 +2,9 @@
 
 namespace TheArchitectIO.CardGames.Core.Solitaire.Basic
 {
+    /// <summary>
+    /// Interface IBasicSolitaireResponse
+    /// </summary>
     public interface IBasicSolitaireResponse
     {
         /// <summary>

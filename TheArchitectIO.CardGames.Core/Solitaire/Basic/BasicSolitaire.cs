@@ -6,49 +6,66 @@ using TheArchitectIO.CardGames.Core.Deck;
 
 namespace TheArchitectIO.CardGames.Core.Solitaire.Basic
 {
+    /// <summary>
+    /// Class BasicSolitaire.
+    /// Implements the <see cref="TheArchitectIO.CardGames.Core.Solitaire.ISolitaire{TheArchitectIO.CardGames.Core.Solitaire.Basic.IBasicSolitaireResponse}" />
+    /// </summary>
+    /// <seealso cref="TheArchitectIO.CardGames.Core.Solitaire.ISolitaire{TheArchitectIO.CardGames.Core.Solitaire.Basic.IBasicSolitaireResponse}" />
     public class BasicSolitaire : ISolitaire<IBasicSolitaireResponse>
     {
-        private int HandSize = 3;
+        /// <summary>
+        /// Gets the hand size
+        /// </summary>
+        private int HandSize { get; }
 
         /// <summary>
-        /// Gets or sets the deck.
+        /// Gets the deck.
         /// </summary>
         /// <value>The deck.</value>
-        private Queue<Card> Deck { get; set; }
+        private Queue<Card> Deck { get; }
 
         /// <summary>
-        /// Gets or sets the hand.
+        /// Gets the hand.
         /// </summary>
         /// <value>The hand.</value>
-        private Queue<Card> Hand { get; set; } = new Queue<Card>();
+        private Queue<Card> Hand { get; } = new Queue<Card>();
 
         /// <summary>
-        /// Gets or sets the spade slot.
+        /// Gets the spade slot.
         /// </summary>
         /// <value>The spade slot.</value>
-        private List<Card> SpadeSlot { get; set; } = new List<Card>();
+        private List<Card> SpadeSlot { get; } = new List<Card>();
 
         /// <summary>
-        /// Gets or sets the club slot.
+        /// Gets the club slot.
         /// </summary>
         /// <value>The club slot.</value>
-        private List<Card> ClubSlot { get; set; } = new List<Card>();
+        private List<Card> ClubSlot { get; } = new List<Card>();
 
         /// <summary>
-        /// Gets or sets the heart slot.
+        /// Gets the heart slot.
         /// </summary>
         /// <value>The heart slot.</value>
-        private List<Card> HeartSlot { get; set; } = new List<Card>();
+        private List<Card> HeartSlot { get; } = new List<Card>();
 
         /// <summary>
-        /// Gets or sets the diamond slot.
+        /// Gets the diamond slot.
         /// </summary>
         /// <value>The diamond slot.</value>
-        private List<Card> DiamondSlot { get; set; } = new List<Card>();
+        private List<Card> DiamondSlot { get; } = new List<Card>();
 
-        private Queue<Card>[] InvisibleSlots { get; set; } = new Queue<Card>[7];
+        /// <summary>
+        /// Gets the invisible slots.
+        /// </summary>
+        /// <value>The invisible slots.</value>
+        private Queue<Card>[] InvisibleSlots { get; } = new Queue<Card>[7];
 
-        private List<Card>[] VisibleSlots { get; set; } = new List<Card>[7];
+
+        /// <summary>
+        /// Gets the visible slots.
+        /// </summary>
+        /// <value>The visible slots.</value>
+        private List<Card>[] VisibleSlots { get; } = new List<Card>[7];
 
         /// <summary>
         /// Initializes a new instance of the <see cref="T:TheArchitectIO.CardGames.Core.Solitaire.Basic.BasicSolitaire"/> class.
@@ -175,14 +192,17 @@ namespace TheArchitectIO.CardGames.Core.Solitaire.Basic
 
             foreach(List<Card> visibleSlot in VisibleSlots)
             {
-                if (visibleSlot.Any() && visibleSlot.First().Value == CardValue.Ace)
+                if (!visibleSlot.Any() || visibleSlot.First().Value != CardValue.Ace)
                 {
-                    //move the cards
-                    MoveCardsToEndSlot(visibleSlot.ToArray());
-
-                    //clear out the visible slot
-                    visibleSlot.Clear();
+                    //doesn't match criteria
+                    continue;
                 }
+
+                //move the cards
+                MoveCardsToEndSlot(visibleSlot.ToArray());
+
+                //clear out the visible slot
+                visibleSlot.Clear();
             }
         }
 
