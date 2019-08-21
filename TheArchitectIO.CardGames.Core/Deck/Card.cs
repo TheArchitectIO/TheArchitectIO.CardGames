@@ -1,5 +1,4 @@
-﻿using System;
-namespace TheArchitectIO.Solitaire.Core.Deck
+﻿namespace TheArchitectIO.CardGames.Core.Deck
 {
     /// <summary>
     /// Card.
@@ -19,14 +18,14 @@ namespace TheArchitectIO.Solitaire.Core.Deck
         public CardValue Value { get; }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="T:TheArchitectIO.Solitaire.Core.Deck.Card"/> class.
+        /// Initializes a new instance of the <see cref="T:TheArchitectIO.CardGames.Core.Deck.Card"/> class.
         /// </summary>
         public Card()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="T:TheArchitectIO.Solitaire.Core.Deck.Card"/> class.
+        /// Initializes a new instance of the <see cref="T:TheArchitectIO.CardGames.Core.Deck.Card"/> class.
         /// </summary>
         /// <param name="suit">Suit.</param>
         /// <param name="value">Value.</param>

@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using TheArchitectIO.Solitaire.Core.Deck;
+using TheArchitectIO.CardGames.Core.Deck;
 
-namespace TheArchitectIO.Solitaire.Core.Basic
+namespace TheArchitectIO.CardGames.Core.Solitaire.Basic
 {
     public class BasicSolitaire : ISolitaire<IBasicSolitaireResponse>
     {
@@ -51,7 +51,7 @@ namespace TheArchitectIO.Solitaire.Core.Basic
         private List<Card>[] VisibleSlots { get; set; } = new List<Card>[7];
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="T:TheArchitectIO.Solitaire.Core.Basic.BasicSolitaire"/> class.
+        /// Initializes a new instance of the <see cref="T:TheArchitectIO.CardGames.Core.Solitaire.Basic.BasicSolitaire"/> class.
         /// </summary>
         /// <param name="handSize">Hand size.</param>
         public BasicSolitaire(int handSize = 3)

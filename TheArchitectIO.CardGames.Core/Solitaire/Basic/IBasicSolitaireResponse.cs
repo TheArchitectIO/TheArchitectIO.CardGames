@@ -1,7 +1,6 @@
-﻿using System;
-using TheArchitectIO.Solitaire.Core.Deck;
+﻿using TheArchitectIO.CardGames.Core.Deck;
 
-namespace TheArchitectIO.Solitaire.Core.Basic
+namespace TheArchitectIO.CardGames.Core.Solitaire.Basic
 {
     public interface IBasicSolitaireResponse
     {

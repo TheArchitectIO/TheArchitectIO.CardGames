@@ -1,5 +1,4 @@
-﻿using System;
-namespace TheArchitectIO.Solitaire.Core.Deck
+﻿namespace TheArchitectIO.CardGames.Core.Deck
 {
     public enum CardValue
     {

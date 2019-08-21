@@ -1,0 +1,38 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29209.62
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheArchitectIO.CardGames.Core", "TheArchitectIO.CardGames.Core\TheArchitectIO.CardGames.Core.csproj", "{A029067C-C08D-4195-9A23-76E484365161}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SampleApplications", "SampleApplications", "{0A1B8536-AADC-49ED-9F95-A6AD1928B057}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B34B7DF1-48DE-4F58-BA65-7EE333756BCA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheArchitectIO.CardGames.Sample.Solitaire", "SampleApplications\TheArchitectIO.CardGames.Sample.Solitaire\TheArchitectIO.CardGames.Sample.Solitaire.csproj", "{45528AA6-617A-4281-8D03-4B34AD92325F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A029067C-C08D-4195-9A23-76E484365161}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A029067C-C08D-4195-9A23-76E484365161}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A029067C-C08D-4195-9A23-76E484365161}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A029067C-C08D-4195-9A23-76E484365161}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45528AA6-617A-4281-8D03-4B34AD92325F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45528AA6-617A-4281-8D03-4B34AD92325F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45528AA6-617A-4281-8D03-4B34AD92325F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45528AA6-617A-4281-8D03-4B34AD92325F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A029067C-C08D-4195-9A23-76E484365161} = {B34B7DF1-48DE-4F58-BA65-7EE333756BCA}
+		{45528AA6-617A-4281-8D03-4B34AD92325F} = {0A1B8536-AADC-49ED-9F95-A6AD1928B057}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {15055555-1B23-493A-AB4C-32574A61F1A3}
+	EndGlobalSection
+EndGlobal

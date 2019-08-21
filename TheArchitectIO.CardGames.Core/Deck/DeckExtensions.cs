@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace TheArchitectIO.Solitaire.Core.Deck
+namespace TheArchitectIO.CardGames.Core.Deck
 {
     public static class DeckExtensions
     {
